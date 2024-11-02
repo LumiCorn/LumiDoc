@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>归档 | LumiDoc</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logoicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js"></script>
+    <script>
+      function renderLatex() {
+        if (typeof renderMathInElement !== 'undefined') {
+          renderMathInElement(document.body, {
+            delimiters: [
+           {left: "$$", right: "$$", display: true},
+           {left: "$", right: "$", display: false},
+           {left: "\begin{math:text}", right: "\end{math:text}", display: false},
+           {left: "\begin{math:display}", right: "\end{math:display}", display:true}
+        ]
+      });
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(renderLatex, 100); // 页面加载后延迟100毫秒渲染
+  });
+
+  document.addEventListener("swup:contentReplaced", renderLatex); // 监听页面切换事件
+  document.addEventListener("vuepress:page-update", renderLatex); // 监听页面更新（其实我不知道哪句话是有用的）
+  document.addEventListener("vuepress:page-updated", renderLatex);
+  document.addEventListener("vuepress:pageChanged", renderLatex); // VuePress特有的页面事件
+
+    // VuePress内容更新时重新渲染
+  if (typeof __VUEPRESS__ !== 'undefined') {
+    __VUEPRESS__.events.on('contentUpdated', renderLatex);
+  }
+</script>
+    <meta name="description" content="一个由LumiCornX创建的文档聚合网站。">
+    <meta name="keywords" content="博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.939650af.css" as="style"><link rel="preload" href="/assets/js/app.c80ce381.js" as="script"><link rel="preload" href="/assets/js/2.c6d9ac9a.js" as="script"><link rel="preload" href="/assets/js/3.857b8d2f.js" as="script"><link rel="prefetch" href="/assets/js/10.4aa0c73b.js"><link rel="prefetch" href="/assets/js/11.0fb589b4.js"><link rel="prefetch" href="/assets/js/12.b477110a.js"><link rel="prefetch" href="/assets/js/13.339382dd.js"><link rel="prefetch" href="/assets/js/14.8087d24c.js"><link rel="prefetch" href="/assets/js/15.90a7163d.js"><link rel="prefetch" href="/assets/js/16.189d9758.js"><link rel="prefetch" href="/assets/js/4.beca80f6.js"><link rel="prefetch" href="/assets/js/5.58d57639.js"><link rel="prefetch" href="/assets/js/6.e71ea7ff.js"><link rel="prefetch" href="/assets/js/7.bcde29d2.js"><link rel="prefetch" href="/assets/js/8.0dac1d7c.js"><link rel="prefetch" href="/assets/js/9.cd0c4b92.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.939650af.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open no-sidebar"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.png" alt="LumiDoc" class="logo"> <span class="site-name can-hide">LumiDoc</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/ai/" class="nav-link"> AI提示词</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习与笔记" class="dropdown-title"><a href="/learn/" class="link-title">学习与笔记</a> <span class="title" style="display:none;">学习与笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">Python学习</a></li><li class="dropdown-item"><!----> <a href="/electronic/" class="nav-link">通用电路技术</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教程文档" class="dropdown-title"><a href="/trial/" class="link-title">教程文档</a> <span class="title" style="display:none;">教程文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">（建设中）</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具3" class="dropdown-title"><a href="/trial/" class="link-title">工具3</a> <span class="title" style="display:none;">工具3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">（建设中）</a></li></ul></div></div><div class="nav-item"><a href="/more/" class="nav-link">更多</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><a href="/about/" class="link-title">关于</a> <span class="title" style="display:none;">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/introduction/" class="nav-link">LumiDoc快速介绍</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Doc开发者" class="dropdown-title"><a href="/dev/" class="link-title">Doc开发者</a> <span class="title" style="display:none;">Doc开发者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dev/standard-norm/" class="nav-link">标准性规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" aria-current="page" class="link-title router-link-exact-active router-link-active">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" aria-current="page" class="nav-link router-link-exact-active router-link-active">归档</a></li></ul></div></div> <a href="https://github.com/LumiCorn/LumiDoc" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="https://cdn.jsdelivr.net/gh/LumiCorn/Pic-BedLumiCornX_Avatar.jpeg"> <div class="blogger-info"><h3>悠悠狮羝LumiCornX</h3> <span>常年混迹于B站与GitHub的游戏区搞笑UP主</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/ai/" class="nav-link"> AI提示词</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习与笔记" class="dropdown-title"><a href="/learn/" class="link-title">学习与笔记</a> <span class="title" style="display:none;">学习与笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/python/" class="nav-link">Python学习</a></li><li class="dropdown-item"><!----> <a href="/electronic/" class="nav-link">通用电路技术</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="教程文档" class="dropdown-title"><a href="/trial/" class="link-title">教程文档</a> <span class="title" style="display:none;">教程文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">（建设中）</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具3" class="dropdown-title"><a href="/trial/" class="link-title">工具3</a> <span class="title" style="display:none;">工具3</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/9a7ee40fc232253e/" class="nav-link">（建设中）</a></li></ul></div></div><div class="nav-item"><a href="/more/" class="nav-link">更多</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="关于" class="dropdown-title"><a href="/about/" class="link-title">关于</a> <span class="title" style="display:none;">关于</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/about/introduction/" class="nav-link">LumiDoc快速介绍</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Doc开发者" class="dropdown-title"><a href="/dev/" class="link-title">Doc开发者</a> <span class="title" style="display:none;">Doc开发者</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dev/standard-norm/" class="nav-link">标准性规范</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" aria-current="page" class="link-title router-link-exact-active router-link-active">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" aria-current="page" class="nav-link router-link-exact-active router-link-active">归档</a></li></ul></div></div> <a href="https://github.com/LumiCorn/LumiDoc" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <div class="custom-page archives-page"><div class="theme-vdoing-wrapper"><h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABGpJREFUSA3tVVtoXFUU3fvOI53UlmCaKIFmwEhsE7QK0ipFEdHEKpXaZGrp15SINsXUWvBDpBgQRKi0+KKoFeJHfZA+ED9KKoIU2gYD9UejTW4rVIzm0VSTziPzuNu1z507dibTTjL4U/DAzLn3nL3X2o91ziX6f9wMFdh6Jvbm9nNSV0msViVO6tN1Rm7NMu2OpeJ9lWBUTDxrJbYTS0hInuwciu9eLHlFxCLCZEk3MegsJmZ5K/JD6t7FkFdEvGUo1g7qJoG3MHImqRIn8/nzY1K9UPKKiJmtnUqHVE3Gbuay6vJE/N2FEmuxFjW2nUuE0yQXRRxLiTUAzs36zhZvOXJPdX850EVnnLZkB8prodQoM5JGj7Xk2mvC7JB8tG04Ef5PiXtG0UtxupRQSfTnBoCy554x18yJHI6I+G5Eru4LHmPJZEQsrvPUbMiA8G/WgMK7w7I+ez7++o2ANfbrjvaOl1tFMs+htG3IrZH9/hDX1Pr8Tc0UvH8tcX29KzAgIGcEkINyW5BF9x891hw6VYqgJHEk0huccS7vh3C6gTiODL+26huuBtbct8eZnqLML8PkxGYpuPZBqtqwkSjgc4mB5gbgig5i+y0UDK35LMxXisn9xQtK+nd26gTIHsHe/oblK/b29fUmN/8Y+9jAQrnBp56m1LcDlDp9irKTExSKduXJVWSqdBMA08pEJnEIOB3FPPMybu/oeV8zFeYN3xx576Q6RH+VmplE4ncQV5v+5rzSoyOU7PuEAg8g803PwBJ0CExno/jcMbN8tONYeOmHiuUNryvm3fRUy4tMPVLdAGkUhNWuggGrJcXPv+ouCjz0MKUHz1J2/E8IC9nqTabcxgaBYM0hPhD5Y65FsbxRQKxCQrDjDctW7PUM3HuZunFyifSAqEfuzCp48Il24luWUWZoyJCaPR82jE0+kFA643wRFVni4RYSq3ohJO2pZ7B5dO4xkDWbEpossJPLSrPjYID8rS2UHTlvyNxqIGsg674XJJ7vnh5L7PNwC4hh2sjCI96mzszOTpxLF0T7l88Yz7lAuK6OnL8gXLOnTvpzSb22YG8W7us3jSebFHeeqnXRG1vt+MoUM84LQIBmMsCTAcOauTh0T0l0neQK7m2bLMt2mGxU3HYssS0J2cdv5wljlPsrIuZLAG/2DOZIXgCYT8uMGZN+e2kSirfxZOPCsC0f24nTZzspnVn9VePS1Z5vubmAGGXG8ZFno9Hel0yfA5ZPhF7Dh972BQJ2qCpgH67lmWtBYbvk6sz02wjky2vXyz0XErP/kFB619js1BtwfOV4OPRqOQBjy3Qbk18vigUPPSD5ceHnwck7W9bhAqZdd7SuG7w4/P2F/GaJh8c7e9qgow+Q7cGBo+98WsLkuktFqiZabtXuQTu/Y5ETbR0v7tNSFnvrmu6pjdoan2KjMu8q/Hmj1EfCO2ZGfEIbIXKUlw8qaX9/b2oeSJmFksSeT/Fn0V3nSypChh4Gjh74ybO9aeZ/AN2dwciu2/MhAAAAAElFTkSuQmCC">
+      归档
+    </h1> <div class="count">
+      总共 <i>3</i> 篇文章
+    </div> <ul><li class="year"><h2>
+            2024
+            <span><i>3</i> 篇
+            </span></h2></li> <li><a href="/ai/"><span class="date">11-02</span>
+            AI提示词存储仓库
+            <!----></a></li><!----> <li><a href="/ai/example/"><span class="date">11-02</span>
+            【范例】让AI写高考英语续写作文
+            <!----></a></li><!----> <li><a href="/about/introduction/"><span class="date">10-28</span>
+            LumiDoc快速介绍
+            <span class="title-tag">
+              原创
+            </span></a></li></ul></div></div> <div class="footer"><div class="icons"><a href="mailto:1344998216@qq.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/LumiCorn" title="GitHub" target="_blank" class="iconfont icon-github"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2024-2024
+    <span> LumiCornX | <a href="https://github.com/LumiCorn/LumiDoc/blob/master/LICENSE" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.c80ce381.js" defer></script><script src="/assets/js/2.c6d9ac9a.js" defer></script><script src="/assets/js/3.857b8d2f.js" defer></script>
+  </body>
+</html>
