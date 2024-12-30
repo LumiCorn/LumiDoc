@@ -33,12 +33,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       { text: ' AI提示词', link: '/ai/' },
-      { text: '学习与笔记', link: '/learn/',
-        items: [
-          { text: 'Python学习', link: '/python/' },
-          { text: '通用电路技术', link: '/electronic/' },
-        ],
-      },
       {
         text: '教程文档',
         link: '/trial/',
@@ -51,14 +45,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         link: '/tools/',
         items: [
           { text: '（建设中）', link: '/pages/9a7ee40fc232253e/' },
-        ],
-      },
-      { text: '书架', link: '/book/', },
-      { 
-        text: '游戏Wiki', 
-        link: '/game/',
-        items: [
-          { text: '恐鬼症Phasmophobia', link: '/game/phasmophobia/start/'},
         ],
       },
       { text: '更多', link: '/more/', },
