@@ -71,6 +71,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
 
     ],
+    
+    enableSPA:true, //尝试开启SPA模式（单页应用），用于改善katex的显示问题
+
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
     repo: 'LumiCorn/LumiDoc', // 导航栏右侧生成Github链接
