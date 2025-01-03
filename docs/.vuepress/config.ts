@@ -79,7 +79,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: true, // 启用编辑
-    editLinkText: '有错误？点我修改并反馈',
+    editLinkText: '修改（仅限开发者）',
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
@@ -178,7 +178,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // SEO和其他元数据
     ['meta', { name: 'keywords', content: '博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界' }],
-    ['meta', { name: 'baidu-site-verification', content: '7F55weZDDc' }], // 百度统计的站长验证
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题
 
     // JavaScript脚本：添加 KaTeX 渲染
@@ -196,9 +195,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     }
   };
 
-  document.addEventListener("DOMContentLoaded", function() {
-    setTimeout(renderLatex, 100); // 页面加载后延迟100毫秒渲染
-  });
+  document.addEventListener("DOMContentLoaded", renderLatex); // 调用并渲染latex
 
   document.addEventListener("swup:contentReplaced", renderLatex); // 监听页面切换事件
   document.addEventListener("vuepress:page-update", renderLatex); // 监听页面更新（其实我不知道哪句话是有用的）
