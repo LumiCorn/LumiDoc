@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>LumiDoc</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/logoicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js"></script>
+    <script>
+      function renderLatex() {
+        console.log("LaTeX-Render starts NOW!")
+        if (typeof renderMathInElement !== 'undefined') {
+          renderMathInElement(document.body, {
+            delimiters: [
+           {left: "$$", right: "$$", display: true},
+           {left: "$", right: "$", display: false},
+           {left: "\begin{math:text}", right: "\end{math:text}", display: false},
+           {left: "\begin{math:display}", right: "\end{math:display}", display:true}
+        ]
+      });
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", renderLatex); // 调用并渲染latex
+  document.addEventListener("vuepress:page-update", renderLatex); // 监听页面更新（其实我不知道哪句话是有用的）
+  document.addEventListener("vuepress:page-update", function () {
+  console.log("Page-Update-Detection CHECK");
+  renderLatex();
+});
+
+  document.addEventListener("vuepress:page-updated", renderLatex);
+  document.addEventListener("vuepress:pageChanged", renderLatex); // VuePress特有的页面事件
+
+
+});
+
+
+    // VuePress内容更新时重新渲染
+  if (typeof __VUEPRESS__ !== 'undefined') {
+    __VUEPRESS__.events.on('contentUpdated', renderLatex);
+  }
+</script>
+    <meta name="description" content="一个由LumiCornX创建的文档聚合网站。">
+    <meta name="keywords" content="博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界">
+    <meta name="theme-color" content="#11a8cd">
+    
+    <link rel="preload" href="/assets/css/0.styles.939650af.css" as="style"><link rel="preload" href="/assets/js/app.8e1074fa.js" as="script"><link rel="preload" href="/assets/js/5.58d57639.js" as="script"><link rel="prefetch" href="/assets/js/10.b171c6a3.js"><link rel="prefetch" href="/assets/js/11.2ac0b6e4.js"><link rel="prefetch" href="/assets/js/12.18086a53.js"><link rel="prefetch" href="/assets/js/13.4704cb63.js"><link rel="prefetch" href="/assets/js/14.15349959.js"><link rel="prefetch" href="/assets/js/15.af7f1ada.js"><link rel="prefetch" href="/assets/js/16.b01c0e6e.js"><link rel="prefetch" href="/assets/js/17.b214ce31.js"><link rel="prefetch" href="/assets/js/18.5597c350.js"><link rel="prefetch" href="/assets/js/19.49e543ad.js"><link rel="prefetch" href="/assets/js/2.c6d9ac9a.js"><link rel="prefetch" href="/assets/js/20.d2ee9480.js"><link rel="prefetch" href="/assets/js/3.857b8d2f.js"><link rel="prefetch" href="/assets/js/4.39c56c32.js"><link rel="prefetch" href="/assets/js/6.f4c19036.js"><link rel="prefetch" href="/assets/js/7.ff203100.js"><link rel="prefetch" href="/assets/js/8.2cd5223e.js"><link rel="prefetch" href="/assets/js/9.379fc221.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.939650af.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-e620a05e><div class="theme-vdoing-content" data-v-e620a05e><span data-v-e620a05e>404闹他放的</span> <blockquote data-v-e620a05e>I'm not a Teapot..</blockquote> <a href="/" class="router-link-active" data-v-e620a05e>返回首页</a></div></div><div class="global-ui"><div></div></div></div>
+    <script src="/assets/js/app.8e1074fa.js" defer></script><script src="/assets/js/5.58d57639.js" defer></script>
+  </body>
+</html>
