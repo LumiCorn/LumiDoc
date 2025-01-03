@@ -71,7 +71,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
 
     ],
-    
+
     enableSPA:true, //尝试开启SPA模式（单页应用），用于改善katex的显示问题
 
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
@@ -186,6 +186,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // JavaScript脚本：添加 KaTeX 渲染
     ['script', {}, `
       function renderLatex() {
+        console.log("LaTeX-Render starts NOW!")
         if (typeof renderMathInElement !== 'undefined') {
           renderMathInElement(document.body, {
             delimiters: [
@@ -193,17 +194,25 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
            {left: "$", right: "$", display: false},
            {left: "\\begin{math:text}", right: "\\end{math:text}", display: false},
            {left: "\\begin{math:display}", right: "\\end{math:display}", display:true}
+           console.log("LaTeX-Render finished SUSCESSFULLY!")
         ]
       });
     }
   };
 
   document.addEventListener("DOMContentLoaded", renderLatex); // 调用并渲染latex
-
-  document.addEventListener("swup:contentReplaced", renderLatex); // 监听页面切换事件
   document.addEventListener("vuepress:page-update", renderLatex); // 监听页面更新（其实我不知道哪句话是有用的）
+  document.addEventListener("vuepress:page-update", function () {
+  console.log("Page-Update-Detection CHECK");
+  renderLatex();
+});
+
   document.addEventListener("vuepress:page-updated", renderLatex);
   document.addEventListener("vuepress:pageChanged", renderLatex); // VuePress特有的页面事件
+
+
+});
+
 
     // VuePress内容更新时重新渲染
   if (typeof __VUEPRESS__ !== 'undefined') {
