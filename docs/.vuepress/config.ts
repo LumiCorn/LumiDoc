@@ -194,7 +194,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
            {left: "$", right: "$", display: false},
            {left: "\\begin{math:text}", right: "\\end{math:text}", display: false},
            {left: "\\begin{math:display}", right: "\\end{math:display}", display:true}
-           console.log("LaTeX-Render finished SUSCESSFULLY!")
         ]
       });
     }
