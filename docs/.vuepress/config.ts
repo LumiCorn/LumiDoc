@@ -33,13 +33,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       { text: ' AI提示词', link: '/ai/' },
-      {
-        text: '教程文档',
-        link: '/trial/',
-        items: [
-          { text: '（建设中）', link: '/pages/9a7ee40fc232253e/' },
-        ],
-      },
      {
         text: '实用工具',
         link: '/tools/',
@@ -47,18 +40,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '（建设中）', link: '/pages/9a7ee40fc232253e/' },
         ],
       },
-      { text: '更多', link: '/more/', },
       { text: '关于', link: '/about/',
         items: [
           { text: 'LumiDoc快速介绍', link: '/about/introduction/' }
         ],
-      },
-      {
-        text: 'Doc开发者',
-        link: '/dev/',
-        items: [
-          { text: '标准性规范', link: '/dev/standard-norm/' },
-          ],
       },
       {
         text: '索引',
@@ -200,8 +185,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   };
 
   document.addEventListener("DOMContentLoaded", renderLatex); // 调用并渲染latex
-  document.addEventListener("vuepress:page-update", renderLatex); // 监听页面更新（其实我不知道哪句话是有用的）
-  document.addEventListener("vuepress:page-update", function () {
+  document.addEventListener("DOMContentLoaded", function () {
   console.log("Page-Update-Detection CHECK");
   renderLatex();
 });
