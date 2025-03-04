@@ -287,7 +287,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     extendMarkdown: (md) => { 
       md.use(require("markdown-it-katex"),{
       strict:false
-      });
+      });},
     },
   
 
