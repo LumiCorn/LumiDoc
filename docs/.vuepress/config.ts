@@ -7,7 +7,6 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-import katex from 'markdown-it-katex'
 
 
 const DOMAIN_NAME = 'doc.lumicornx.xyz' // 域名 (不带https)
@@ -320,7 +319,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
-    extendMarkdown: (md) => { md.use(katex);},
+    // extendMarkdown: (md) => { md.use(katex);},
   },
   
 
