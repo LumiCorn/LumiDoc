@@ -7,7 +7,7 @@ import dayjs from 'dayjs'
 import baiduCode from './config/baiduCode' // 百度统计hm码
 import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-
+import katex from 'markdown-it-katex'
 
 const DOMAIN_NAME = 'doc.lumicornx.xyz' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
@@ -161,7 +161,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // KaTeX 的 CSS 和脚本
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css' }],
     ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js', defer: true }],
 
     // SEO和其他元数据
     ['meta', { name: 'keywords', content: '博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界' }],
@@ -319,7 +319,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
-    // extendMarkdown: (md) => { md.use(katex);},
+    extendMarkdown: (md) => { md.use(katex);},
   },
   
 
