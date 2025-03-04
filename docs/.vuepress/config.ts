@@ -166,42 +166,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // SEO和其他元数据
     ['meta', { name: 'keywords', content: '博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界' }],
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题
-
-    // JavaScript脚本：添加 KaTeX 渲染
-    ['script', {}, `
-      function renderLatex() {
-        console.log("LaTeX-Render starts NOW!")
-        if (typeof renderMathInElement !== 'undefined') {
-          renderMathInElement(document.body, {
-            delimiters: [
-           {left: "$$", right: "$$", display: true},
-           {left: "$", right: "$", display: false},
-           {left: "\\begin{math:text}", right: "\\end{math:text}", display: false},
-           {left: "\\begin{math:display}", right: "\\end{math:display}", display:true}
-        ]
-      });
-    }
-  };
-
-  document.addEventListener("DOMContentLoaded", renderLatex); // 调用并渲染latex
-  document.addEventListener("DOMContentLoaded", function () {
-  console.log("Page-Update-Detection CHECK");
-  renderLatex();
-});
-
-  document.addEventListener("vuepress:page-updated", renderLatex);
-  document.addEventListener("vuepress:pageChanged", renderLatex); // VuePress特有的页面事件
-
-
-});
-
-
-    // VuePress内容更新时重新渲染
-  if (typeof __VUEPRESS__ !== 'undefined') {
-    __VUEPRESS__.events.on('contentUpdated', renderLatex);
-  }
-`]
-],
+        ],
     
   // 插件配置
   plugins: <UserPlugins>[
