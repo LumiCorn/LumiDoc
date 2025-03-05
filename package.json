@@ -31,6 +31,6 @@
     "vuepress-plugin-zooming": "^1.1.7",
     "vuepress-theme-vdoing": "^1.12.9",
     "yamljs": "^0.3.0",
-    "markdown-it-katex": "^0.16.8"
+    "markdown-it-katex": "^2.0.0"
   }
 }
