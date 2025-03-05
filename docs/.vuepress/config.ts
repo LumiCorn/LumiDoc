@@ -159,9 +159,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' }],
 
     // KaTeX 的 CSS 和脚本
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.js' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/contrib/auto-render.min.js', defer: true }],
+    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js' }],
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js', defer: true }],
 
     // SEO和其他元数据
     ['meta', { name: 'keywords', content: '博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界' }],
