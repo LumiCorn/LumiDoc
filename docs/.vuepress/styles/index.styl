@@ -70,6 +70,8 @@ body .vuepress-plugin-demo-block__wrapper
   .highlight
     color: $accentColor
     font-weight: bold
+
 // 对 LaTeX 公式保留 CSS
 .katex { font-size: 1.1em; }
 .katex-display { text-align: center; }
+.katex .msupsub { vertical-align: baseline !important; } // 强制修正上标错位的现象
