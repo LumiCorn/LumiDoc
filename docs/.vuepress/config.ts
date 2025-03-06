@@ -32,13 +32,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       { text: ' AI提示词', link: '/ai/' },
-     {
-        text: '实用工具',
-        link: '/tools/',
-        items: [
-          { text: '（建设中）', link: '/pages/9a7ee40fc232253e/' },
-        ],
-      },
       { text: '关于', link: '/about/',
         items: [
           { text: 'LumiDoc快速介绍', link: '/about/introduction/' }
@@ -60,12 +53,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
-    repo: 'LumiCorn/LumiDoc', // 导航栏右侧生成Github链接
+    // repo: 'LumiCorn/LumiDoc', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
     lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
     // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: true, // 启用编辑
+    editLinks: false, // 启用编辑
     editLinkText: '修改（仅限开发者）',
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
@@ -155,7 +148,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   head: [
     ['link', { rel: 'icon', href: '/img/logoicon.ico' }], // favicon
 
-    // Font Awesome 的 CSS
+    // FontAwesome 的 CSS
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css' }],
 
     // KaTeX 的 CSS 和脚本
@@ -166,7 +159,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // SEO和其他元数据
     ['meta', { name: 'keywords', content: '博客,markdown,教程,AI,工具,闲聊,个人简介,分享,文档,世界' }],
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题
-        ],
+  ],
     
   // 插件配置
   plugins: <UserPlugins>[
