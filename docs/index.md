@@ -27,4 +27,15 @@ tagline: 一个由LumiCornX创建的文档聚合网站
 # hideRightBar: true # 是否隐藏右侧边栏
 ---
 
-欢迎来到LumiDoc！
+# 欢迎来到 LumiDoc！
+
+LumiDoc 是由 [悠悠狮羝LumiCornX](https://space.bilibili.com/234052228)建立的一个 **文档聚合网站** ！
+
+在这个网站中，除了可以浏览有关悠悠狮羝个人发布的一些有趣的内容外，还可以得到各种各样的工具/软件/教程！
+
+让我们浏览世界➡️ [<i class="fa-solid fa-book"></i>什么是 LumiDoc？](\about\learning-lumidoc)
+
+---
+
+# 快速导航
+
