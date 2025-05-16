@@ -11,45 +11,37 @@ permissions:
 jobs:
   deploy-gh-pages:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout 仓库
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          # 如果你文档需要 Git 子模块，取消注释下一行
-          # submodules: true
-
-      - name: 安装依赖
-        run: |
-          corepack enable
-          pnpm install --frozen-lockfile --store-dir=~/.pnpm-store
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
-
-      - name: 缓存 pnpm store
-        uses: actions/cache@v3
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: 创建缓存目录（避免缓存报错）
-        run: mkdir -p ~/.pnpm-store
+          version: 8
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
 
-      
+      - name: 创建 pnpm 缓存目录
+        run: mkdir -p .pnpm-store
+
+      - name: 安装依赖
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile --store-dir=.pnpm-store
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-        run: |-
+        run: |
           pnpm run docs:build
           > src/.vuepress/dist/.nojekyll
 
