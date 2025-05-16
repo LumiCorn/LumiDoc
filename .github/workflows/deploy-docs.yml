@@ -32,6 +32,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
+      - name: 创建缓存目录（避免缓存报错）
+        run: mkdir -p ~/.pnpm-store
+
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
