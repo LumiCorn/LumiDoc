@@ -1,22 +1,23 @@
 ---
 home: true
 icon: house
-title: 项目主页
+title: LumiDoc
 heroImage: https://theme-hope-assets.vuejs.press/logo.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
   background-attachment: fixed
-heroText: 项目名称
-tagline: 你可以在这里放置或是整个项目的描述。
+heroText: LumiDoc
+tagline: 一个由 悠悠狮羝LumiCornX 建立的文档聚合网站。
 actions:
-  - text: 使用指南
-    icon: lightbulb
-    link: ./demo/
+  - text: 快速上手 LumiDoc
+    icon: ic:round-flash-on
+    link: ./start/
     type: primary
 
-  - text: 文档
-    link: ./guide/
+  - text: 查看目录
+    icon: ic:menu
+    link: ./menu/
 
 highlights:
   - header: 易于安装
