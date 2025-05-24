@@ -6,8 +6,8 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "文档演示",
-  description: "vuepress-theme-hope 的文档演示",
+  title: "LumiDoc | 由 悠悠狮羝LumiCornX 建立的文档网站",
+  description: "寻找你喜欢的一切。",
 
   theme,
 
