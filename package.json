@@ -11,7 +11,7 @@
     "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.88",
+    "@vuepress/bundler-vite": "2.0.0-rc.23",
     "katex": "^0.16.22",
     "markmap-lib": "^0.18.12",
     "markmap-toolbar": "^0.18.12",
