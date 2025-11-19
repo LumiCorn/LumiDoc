@@ -21,9 +21,6 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
-    ],
-    "overrides": {
-      "@vuepress/helper": "2.0.0-rc.118"
-    }
+    ]
   }
 }
