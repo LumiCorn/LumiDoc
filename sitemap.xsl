@@ -37,6 +37,10 @@
             background: var(--bg-color);
           }
 
+          html {
+            font-size: 14px;
+          }
+
           body {
             min-height: 100vh;
             color: var(--text-color);
@@ -67,7 +71,7 @@
 
           table {
             width: 100%;
-            border-radius: 0.5rem;
+            border-radius: 8px;
             border-collapse: collapse;
             text-align: center;
             overflow: hidden;
@@ -80,19 +84,19 @@
           }
 
           th {
-            min-width: 3.5em;
+            min-width: 56px;
             padding: 0.6em 1em;
 
             background-color: var(--brand-color);
             color: var(--bg-color);
 
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 16px;
           }
 
           @media (max-width: 719px) {
             th {
-              font-size: 0.875rem;
+              font-size: 14px;
             }
           }
 
@@ -120,7 +124,7 @@
 
           @media (max-width: 719px) {
             td {
-              font-size: 0.75rem;
+              font-size: 12px;
             }
           }
 
@@ -129,12 +133,12 @@
           }
 
           footer {
-            margin-top: 0.75rem;
-            padding: 0.25rem;
+            margin-top: 10px;
+            padding: 4px;
 
             color: #888;
 
-            font-size: 0.75rem;
+            font-size: 12px;
             text-align: center;
           }
         </style>
