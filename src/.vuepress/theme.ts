@@ -78,6 +78,7 @@ export default hopeTheme({
     tabs: true,
     tasklist: true,
     vPre: true,
+    markmap: true,
 
     // 取消注释它们如果你需要 TeX 支持
    math: {
