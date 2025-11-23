@@ -4,7 +4,7 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
-  hostname: "https://vuepress-theme-hope-docs-demo.netlify.app",
+  hostname: "https://doc.lumicornx.xyz",
 
   author: {
     name: "悠悠狮羝LumiCornX",
@@ -24,8 +24,8 @@ export default hopeTheme({
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
-  displayFooter: true,
+  // footer: "",
+   displayFooter: true,
 
   // 加密配置
   encrypt: {
@@ -38,7 +38,7 @@ export default hopeTheme({
   },
 
   // 多语言配置
-  //metaLocales: {
+  // metaLocales: {
   //  editLink: "在 GitHub 上编辑此页",
   // },
 
