@@ -2,25 +2,26 @@ import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
   "/": [
-    "",
-    "portfolio",
     {
-      text: "案例",
-      icon: "laptop-code",
-      prefix: "demo/",
-      link: "demo/",
+      text: "LumiDoc 首页",
+      icon: "house",
+      link: "/",
+    },
+    {
+      text: "目录",
+      icon: "list",
+      link: "/menu",
+    },
+    {
+      text: "AI 提示词",
+      icon: "robot",
+      prefix: "AI提示词/",
       children: "structure",
     },
     {
-      text: "文档",
-      icon: "book",
-      prefix: "guide/",
-      children: "structure",
-    },
-    {
-      text: "幻灯片",
-      icon: "person-chalkboard",
-      link: "https://ecosystem.vuejs.press/zh/plugins/markdown/revealjs/demo.html",
+      text: "B 站主页",
+      icon: "tv",
+      link: "https://space.bilibili.com/234052228",
     },
   ],
 });
