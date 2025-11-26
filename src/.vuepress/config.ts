@@ -17,7 +17,7 @@ export default defineUserConfig({
       {},
       `
         if (typeof window !== "undefined") {
-          let originalTitle = document.title;  // 保存 VuePress 生成的完整标题
+          let originalTitle = document.title;  // 保存 VuePress 生成的完整标题 
           let leaveIntervals = [];
           const leaveMessage = "(ﾟдﾟ≡ﾟдﾟ)";
           const callOutMessage = "(ﾟдﾟ≡ﾟдﾟ) ...人呢！";
