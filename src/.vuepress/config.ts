@@ -46,24 +46,28 @@ export default defineUserConfig({
             saveCurrentTitle();
             document.title = leaveMessage;
             
+            // 第一个周期：1秒后显示"...人呢！"
             leaveIntervals.push(setTimeout(() => {
               if (document.hidden) {
                 document.title = callOutMessage;
               }
             }, 1000));
 
+            // 第一个周期：2秒后恢复基础消息
             leaveIntervals.push(setTimeout(() => {
               if (document.hidden) {
                 document.title = leaveMessage;
               }
             }, 2000));
             
+            // 之后每3秒循环一次
             const cycleInterval = setInterval(() => {
               if (!document.hidden) {
                 clearInterval(cycleInterval);
                 return;
               }
               
+              // 显示"...人呢！"1秒
               document.title = callOutMessage;
               leaveIntervals.push(setTimeout(() => {
                 if (document.hidden) {
