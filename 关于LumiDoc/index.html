@@ -30,15 +30,34 @@
       }
     </script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"关于 Lumi Doc"}</script><meta property="og:url" content="https://doc.lumicornx.xyz/%E5%85%B3%E4%BA%8ELumiDoc/"><meta property="og:site_name" content="LumiDoc | 由 悠悠狮羝LumiCornX 建立的文档网站"><meta property="og:title" content="关于 Lumi Doc"><meta property="og:type" content="website"><meta property="og:locale" content="zh-CN"><script>
-        if (typeof window !== "undefined") {     // 此脚本用来在标题栏显示用户离开和返回时的消息
-          const originalTitle = document.title;
+        if (typeof window !== "undefined") {
+          let originalTitle = document.title;  // 保存 VuePress 生成的完整标题 
+          let leaveIntervals = [];
           const leaveMessage = "(ﾟдﾟ≡ﾟдﾟ)";
           const callOutMessage = "(ﾟдﾟ≡ﾟдﾟ) ...人呢！";
           const returnMessage = "_(¦3」∠)_欢迎回来～";
-          let leaveIntervals = [];
+
+          // 简单的标题保存和恢复，不重写标题逻辑
+          const saveCurrentTitle = () => {
+            originalTitle = document.title;
+          };
+
+          const initializeTitle = () => {
+            // 等待 VuePress 完成初始标题设置
+            setTimeout(() => {
+              saveCurrentTitle();
+            }, 500);
+          };
+
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeTitle);
+          } else {
+            initializeTitle();
+          }
 
           const startLeaveAnimation = () => {
-            // 立即显示基础离开消息
+            // 动画开始前保存当前 VuePress 生成的标题
+            saveCurrentTitle();
             document.title = leaveMessage;
             
             // 第一个周期：1秒后显示"...人呢！"
@@ -89,6 +108,7 @@
               stopLeaveAnimation();
               document.title = returnMessage;
               setTimeout(() => {
+                // 恢复 VuePress 生成的标题
                 document.title = originalTitle;
               }, 2000);
             }
@@ -110,14 +130,33 @@
 
           window.addEventListener("blur", handleBlur);
           window.addEventListener("focus", handleFocus);
+
+          // 监听路由变化，在 VuePress 更新标题后保存
+          const setupTitleTracking = () => {
+            let lastTitle = document.title;
+            
+            // 简单轮询检查标题变化（更轻量）
+            setInterval(() => {
+              if (document.title !== lastTitle && 
+                  document.title !== leaveMessage && 
+                  document.title !== callOutMessage && 
+                  document.title !== returnMessage) {
+                lastTitle = document.title;
+                originalTitle = document.title;
+              }
+            }, 1000);
+          };
+
+          // 延迟设置标题跟踪
+          setTimeout(setupTitleTracking, 1000);
         }
       </script><title>关于 Lumi Doc | LumiDoc | 由 悠悠狮羝LumiCornX 建立的文档网站</title><meta name="description" content="寻找你喜欢的一切。">
     <link rel="preload" href="/assets/style-D1PEjtMu.css" as="style"><link rel="stylesheet" href="/assets/style-D1PEjtMu.css">
-    <link rel="modulepreload" href="/assets/app-uHl6siMQ.js"><link rel="modulepreload" href="/assets/index.html-B78Aq5Hx.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
-    <link rel="prefetch" href="/assets/index.html-L4iwVSKd.js" as="script"><link rel="prefetch" href="/assets/menu.html-BsYJkIMd.js" as="script"><link rel="prefetch" href="/assets/portfolio.html-BaQW1h3n.js" as="script"><link rel="prefetch" href="/assets/0.about.html-DLCAa77W.js" as="script"><link rel="prefetch" href="/assets/index.html-CIkuR7LX.js" as="script"><link rel="prefetch" href="/assets/0.前言.html-B4QXKOsx.js" as="script"><link rel="prefetch" href="/assets/404.html-BasqJYwe.js" as="script"><link rel="prefetch" href="/assets/index.html-CI_IYijd.js" as="script"><link rel="prefetch" href="/assets/index-CXWLDDDv.js" as="script"><link rel="prefetch" href="/assets/index-CCp8vKvN.js" as="script"><link rel="prefetch" href="/assets/index-2riPsTqy.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-D2Nf-uDI.js" as="script">
+    <link rel="modulepreload" href="/assets/app-C980sPxa.js"><link rel="modulepreload" href="/assets/index.html-Bfvh7Tk-.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-DlAUqK2U.js">
+    <link rel="prefetch" href="/assets/index.html-BMo7tX86.js" as="script"><link rel="prefetch" href="/assets/menu.html-BwTvfZY5.js" as="script"><link rel="prefetch" href="/assets/portfolio.html-0C6qMeHd.js" as="script"><link rel="prefetch" href="/assets/0.about.html-ZDEYbBaA.js" as="script"><link rel="prefetch" href="/assets/index.html-mkiZKUUM.js" as="script"><link rel="prefetch" href="/assets/0.前言.html-Dl1vLV2m.js" as="script"><link rel="prefetch" href="/assets/404.html-D1zBP22L.js" as="script"><link rel="prefetch" href="/assets/index.html-3UPRVx7G.js" as="script"><link rel="prefetch" href="/assets/index-CXWLDDDv.js" as="script"><link rel="prefetch" href="/assets/index-CCp8vKvN.js" as="script"><link rel="prefetch" href="/assets/index-2riPsTqy.js" as="script"><link rel="prefetch" href="/assets/photoswipe.esm-D2Nf-uDI.js" as="script">
   </head>
   <body>
     <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">跳至主要內容</a><!--]--><div class="theme-container external-link-icon has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="带我回家"><img class="vp-nav-logo" src="https://theme-hope-assets.vuejs.press/logo.svg" alt><!----><span class="vp-site-name hide-in-pad">LumiDoc | 由 悠悠狮羝LumiCornX 建立的文档网站</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><nav class="vp-nav-links"><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/" aria-label="首页"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:home" sizing="height" height="1em"></iconify-icon><!--]-->首页<!----></a></div><div class="vp-nav-item hide-in-mobile"><a class="route-link auto-link" href="/menu/" aria-label="目录"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:list" sizing="height" height="1em"></iconify-icon><!--]-->目录<!----></a></div><div class="vp-nav-item hide-in-mobile"><div class="vp-dropdown-wrapper"><button type="button" class="vp-dropdown-title" aria-label="指南"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:lightbulb" sizing="height" height="1em"></iconify-icon>指南<!--]--><span class="arrow"></span><ul class="vp-dropdown"><li class="vp-dropdown-item"><h4 class="vp-dropdown-subtitle">Bar</h4><ul class="vp-dropdown-subitems"><li class="vp-dropdown-subitem"><a class="route-link auto-link" href="/guide/bar/baz.html" aria-label="/guide/bar/baz.html"><!---->/guide/bar/baz.html<!----></a></li><li class="vp-dropdown-subitem"><a class="route-link auto-link" href="/guide/bar/" aria-label="..."><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:ellipsis" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->...<!----></a></li></ul></li><li class="vp-dropdown-item"><h4 class="vp-dropdown-subtitle">Foo</h4><ul class="vp-dropdown-subitems"><li class="vp-dropdown-subitem"><a class="route-link auto-link" href="/guide/foo/ray.html" aria-label="/guide/foo/ray.html"><!---->/guide/foo/ray.html<!----></a></li><li class="vp-dropdown-subitem"><a class="route-link auto-link" href="/guide/foo/" aria-label="..."><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:ellipsis" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->...<!----></a></li></ul></li></ul></button></div></div><div class="vp-nav-item hide-in-mobile"><a class="auto-link external-link" href="https://theme-hope.vuejs.press/zh/" aria-label="V2 文档" rel="noopener noreferrer" target="_blank"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:book" sizing="height" height="1em"></iconify-icon><!--]-->V2 文档<!----></a></div></nav><!--]--></div><div class="vp-navbar-end"><!--[--><!----><!----><div class="vp-nav-item hide-in-mobile"><button type="button" class="vp-color-mode-switch" id="color-mode-switch"><svg xmlns="http://www.w3.org/2000/svg" class="icon auto-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="auto icon" name="auto" style="display:block;"><path d="M512 992C246.92 992 32 777.08 32 512S246.92 32 512 32s480 214.92 480 480-214.92 480-480 480zm0-840c-198.78 0-360 161.22-360 360 0 198.84 161.22 360 360 360s360-161.16 360-360c0-198.78-161.22-360-360-360zm0 660V212c165.72 0 300 134.34 300 300 0 165.72-134.28 300-300 300z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon dark-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="dark icon" name="dark" style="display:none;"><path d="M524.8 938.667h-4.267a439.893 439.893 0 0 1-313.173-134.4 446.293 446.293 0 0 1-11.093-597.334A432.213 432.213 0 0 1 366.933 90.027a42.667 42.667 0 0 1 45.227 9.386 42.667 42.667 0 0 1 10.24 42.667 358.4 358.4 0 0 0 82.773 375.893 361.387 361.387 0 0 0 376.747 82.774 42.667 42.667 0 0 1 54.187 55.04 433.493 433.493 0 0 1-99.84 154.88 438.613 438.613 0 0 1-311.467 128z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon light-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="light icon" name="light" style="display:none;"><path d="M952 552h-80a40 40 0 0 1 0-80h80a40 40 0 0 1 0 80zM801.88 280.08a41 41 0 0 1-57.96-57.96l57.96-58a41.04 41.04 0 0 1 58 58l-58 57.96zM512 752a240 240 0 1 1 0-480 240 240 0 0 1 0 480zm0-560a40 40 0 0 1-40-40V72a40 40 0 0 1 80 0v80a40 40 0 0 1-40 40zm-289.88 88.08-58-57.96a41.04 41.04 0 0 1 58-58l57.96 58a41 41 0 0 1-57.96 57.96zM192 512a40 40 0 0 1-40 40H72a40 40 0 0 1 0-80h80a40 40 0 0 1 40 40zm30.12 231.92a41 41 0 0 1 57.96 57.96l-57.96 58a41.04 41.04 0 0 1-58-58l58-57.96zM512 832a40 40 0 0 1 40 40v80a40 40 0 0 1-80 0v-80a40 40 0 0 1 40-40zm289.88-88.08 58 57.96a41.04 41.04 0 0 1-58 58l-57.96-58a41 41 0 0 1 57.96-57.96z"></path></svg></button></div><!----><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/" aria-label="LumiDoc 首页"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:house" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->LumiDoc 首页<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/menu.html" aria-label="目录"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:list" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->目录<!----></a></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header"><iconify-icon class="vp-icon" icon="fa6-solid:robot" sizing="both" width="1em" height="1em"></iconify-icon><span class="vp-sidebar-title">AI 提示词</span><!----></p><ul class="vp-sidebar-links"></ul></section></li><li><a class="auto-link external-link vp-sidebar-link" href="https://space.bilibili.com/234052228" aria-label="B 站主页" rel="noopener noreferrer" target="_blank"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:tv" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->B 站主页<!----></a></li></ul><!----></aside><!--[--><main id="main-content" class="vp-page"><!--[--><!----><!----><nav class="vp-breadcrumb disable"></nav><div class="vp-page-title"><h1><!---->关于 Lumi Doc</h1><div class="page-info"><span class="page-author-info" aria-label="作者🖊" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon" name="author"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="page-author-item" href="https://lumicornx.xyz" target="_blank" rel="noopener noreferrer">悠悠狮羝LumiCornX</a></span><span property="author" content="悠悠狮羝LumiCornX"></span></span><!----><!----><!----><span class="page-reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="up"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon" name="timer"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>小于 1 分钟</span><meta property="timeRequired" content="PT1M"></span><!----><!----></div><hr></div><!----><div class="" vp-content><!----><div id="markdown-content"><div class="vp-catalog"><h2 class="vp-catalog-main-title">目录</h2><ul class="vp-catalog-list deep"><li class="vp-catalog-item"><h3 id class="vp-catalog-child-title"><a href="#" class="vp-catalog-header-anchor" aria-hidden="true"></a><a class="route-link vp-catalog-title" href="/%E5%85%B3%E4%BA%8ELumiDoc/0.about.html"></a></h3><!----></li><li class="vp-catalog-item"><h3 id="投稿" class="vp-catalog-child-title has-children"><a href="#投稿" class="vp-catalog-header-anchor" aria-hidden="true"></a><a class="route-link vp-catalog-title" href="/%E5%85%B3%E4%BA%8ELumiDoc/%E6%8A%95%E7%A8%BF/">投稿</a></h3><ul class="vp-child-catalogs"><li class="vp-child-catalog"><div class="vp-catalog-sub-title"><a href="#向 LumiDoc 投稿" class="vp-catalog-header-anchor"></a><a class="route-link vp-catalog-title" href="/%E5%85%B3%E4%BA%8ELumiDoc/%E6%8A%95%E7%A8%BF/0.%E5%89%8D%E8%A8%80.html">向 LumiDoc 投稿</a></div><!----></li></ul></li></ul></div></div><!----><!----><!----></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><!----><!----></div></footer><!----><!----><!----><!--]--></main><!--]--><footer class="vp-footer-wrapper" vp-footer><!----><div class="vp-copyright">Copyright © 2025 悠悠狮羝LumiCornX </div></footer></div><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
-    <script type="module" src="/assets/app-uHl6siMQ.js" defer></script>
+    <script type="module" src="/assets/app-C980sPxa.js" defer></script>
   </body>
 </html>
