@@ -12,12 +12,12 @@ tagline: 一个由 悠悠狮羝LumiCornX 建立的文档聚合网站。
 actions:
   - text: 快速上手 LumiDoc
     icon: ic:round-flash-on
-    link: ./start/
+    link: ./快速开始/
     type: primary
 
   - text: 查看目录
     icon: ic:menu
-    link: ./menu/
+    link: ./menu
 
 highlights:
   - header: AI 提示词仓库 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m19 9l1.25-2.75L23 5l-2.75-1.25L19 1l-1.25 2.75L15 5l2.75 1.25zm-7.5.5L9 4L6.5 9.5L1 12l5.5 2.5L9 20l2.5-5.5L17 12zM19 15l-1.25 2.75L15 19l2.75 1.25L19 23l1.25-2.75L23 19l-2.75-1.25z"/></svg>
