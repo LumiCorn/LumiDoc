@@ -130,7 +130,7 @@ export default hopeTheme({
     //},
 
     components: {
-      components: ["Badge", "VPCard","Share","VidStack","SiteInfo","BiliBili","ArtPlayer","PDF","CodePen"],
+      components: ["Badge", "VPCard","Share","VidStack","SiteInfo","BiliBili","ArtPlayer","PDF","CodePen","VPBanner"],
     },
 
     icon: {
