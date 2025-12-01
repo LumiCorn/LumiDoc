@@ -2,7 +2,7 @@
 home: true
 icon: house
 title: LumiDoc
-heroImage: https://theme-hope-assets.vuejs.press/logo.svg
+heroImage: /LumiDoc_LOGO_short_colorful.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
@@ -11,12 +11,12 @@ heroText: LumiDoc
 tagline: 一个由 悠悠狮羝LumiCornX 建立的文档聚合网站。
 actions:
   - text: 快速上手 LumiDoc
-    icon: ic:round-flash-on
+    icon: iconify:ic:round-flash-on
     link: ./快速开始/
     type: primary
 
   - text: 查看目录
-    icon: ic:menu
+    icon: iconify:ic:baseline-menu
     link: ./menu
 
 highlights:
@@ -38,23 +38,23 @@ highlights:
       background-size: initial
     features:
       - title: 效率工具
-        icon: ic:baseline-handyman
-        details: 在 Windows 或安卓上的工具合集。
+        icon: iconify:ic:baseline-handyman
+        details: 在 Windows 或安卓上的工具合集.
 
       - title: 优质 App 推荐
-        icon: ic:round-app-shortcut
+        icon: iconify:ic:round-app-shortcut
         details: 推荐一些好用<s>但不一定贵</s>的有趣 App。
 
       - title: 高清晰度文档
-        icon: ic:outline-document-scanner
+        icon: iconify:ic:outline-document-scanner
         details: 这里有清晰的文档（是逻辑清晰不是 4K 高清）。
 
       - title: 亲妈级教程
-        icon: ic:baseline-accessibility-new
+        icon: iconify:ic:baseline-accessibility-new
         details: Lifehack! 一切因教程变得简单。
 
       - title: 学习资料
-        icon: ic:round-school
+        icon: iconify:ic:round-school
         details: 祝你学业有成，早日上岸！
 
   - header: QQ 群
@@ -64,15 +64,15 @@ highlights:
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/9-dark.svg
     highlights:
       - title: 群规则
-        icon: ic:baseline-account-balance
+        icon: iconify:ic:baseline-account-balance
         details: 所有粉丝群都应该遵守的规则。
 
       - title: 群列表
-        icon: ic:baseline-format-list-bulleted
+        icon: iconify:ic:baseline-format-list-bulleted
         details: 所有 QQ 粉丝群的加群方式都在这里。
 
       - title: 更多
-        icon: ic:baseline-more-horiz
+        icon: iconify:ic:baseline-more-horiz
         details: 其他平台的粉丝群、管理员职务等
 
   - header: 关于 悠悠狮羝LumiCornX
@@ -82,19 +82,19 @@ highlights:
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
     highlights:
       - title: 入驻平台账号
-        icon: ic:baseline-account-circle
+        icon: iconify:ic:baseline-account-circle
 
       - title: 随笔
-        icon: ic:baseline-face-retouching-natural
+        icon: iconify:ic:baseline-face-retouching-natural
 
       - title: 向我捐款
-        icon: ic:outline-attach-money
+        icon: iconify:ic:outline-attach-money
 
       - title: Furry 设定
-        icon: ic:round-settings-accessibility
+        icon: iconify:ic:round-settings-accessibility
 
       - title: 更多
-        icon: ic:baseline-more-horiz
+        icon: iconify:ic:baseline-more-horiz
 
 copyright: ©2025-至今 悠悠狮羝LumiCornX 保留所有权利
 
