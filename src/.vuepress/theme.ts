@@ -128,9 +128,10 @@ export default hopeTheme({
     //  category: "Announcements",
     //  categoryId: "DIC_kwDOG_Pt2M4COD69",
     //},
-
+    
     components: {
-      components: ["Badge", "VPCard","Share","VidStack","SiteInfo","BiliBili","ArtPlayer","PDF","CodePen","VPBanner"],
+      
+      components: ["Badge", "VPCard", "VidStack", "SiteInfo", "BiliBili", "PDF", "VPBanner", "Share"],
     },
 
     icon: {

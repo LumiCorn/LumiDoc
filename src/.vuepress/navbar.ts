@@ -9,7 +9,7 @@ export default navbar([
   {
     text: "目录",
     icon: "list",
-    link: "/menu/",
+    link: "/menu",
   },
   {
     text: "指南",
