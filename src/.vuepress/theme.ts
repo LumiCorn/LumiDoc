@@ -11,7 +11,7 @@ export default hopeTheme({
     url: "https://lumicornx.xyz",
   },
 
-  logo: "/LumiDoc_LOGO_short_white_hollow.svg",
+  logo: "/LumiDoc_LOGO.svg",
 
   // repo: "vuepress-theme-hope/vuepress-theme-hope",
 

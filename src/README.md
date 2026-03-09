@@ -2,7 +2,7 @@
 home: true
 icon: house
 title: LumiDoc
-heroImage: /LumiDoc_LOGO_short_colorful.svg
+heroImage: /LumiDoc_LOGO.svg
 bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
 bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
 bgImageStyle:
