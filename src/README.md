@@ -73,7 +73,7 @@ highlights:
         details: 其他平台的粉丝群、管理员职务等
 
   - header: 关于 悠悠狮羝LumiCornX
-    description: 一个自强但渴望被爱的小男孩。
+    description: 一个自强的小男孩。
     image: /assets/image/line-svg/person_white.svg
     bgImage: https://theme-hope-assets.vuejs.press/bg/5-light.svg
     bgImageDark: https://theme-hope-assets.vuejs.press/bg/5-dark.svg
