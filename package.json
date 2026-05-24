@@ -24,9 +24,6 @@
     "vuepress-theme-hope": "2.0.0-rc.107"
   },
   "pnpm": {
-    "overrides": {
-      "@vuepress/helper": "2.0.0-rc.112"
-    },
     "onlyBuiltDependencies": [
       "esbuild"
     ]
