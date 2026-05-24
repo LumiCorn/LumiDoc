@@ -4,6 +4,7 @@
   "version": "2.0.0",
   "license": "MIT",
   "type": "module",
+  "packageManager": "pnpm@8.15.9",
   "scripts": {
     "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
