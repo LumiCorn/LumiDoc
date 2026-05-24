@@ -3,10 +3,7 @@ home: true
 icon: house
 title: LumiDoc
 heroImage: /LumiDoc_LOGO.svg
-bgImage: https://theme-hope-assets.vuejs.press/bg/6-light.svg
-bgImageDark: https://theme-hope-assets.vuejs.press/bg/6-dark.svg
-bgImageStyle:
-  background-attachment: fixed
+heroFullScreen: true
 heroText: LumiDoc
 tagline: 一个由 悠悠狮羝LumiCornX 建立的文档聚合网站。
 actions:

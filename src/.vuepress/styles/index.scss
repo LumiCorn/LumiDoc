@@ -1,190 +1,207 @@
 // place your custom styles here
 
-/* LIQUID GLASS STYLES */
+@use "vuepress-theme-hope/presets/bounce-icon";
 
-.liquidGlass-wrapper {
-  position: relative;
-  display: flex;
-  font-weight: 600;
-  overflow: hidden;
-
-  color: black;
-  cursor: pointer;
-
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
-
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-}
-
-.liquidGlass-effect {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-
-  backdrop-filter: blur(1px);
-  filter: url(#glass-distortion);
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.liquidGlass-tint {
-  z-index: 0;
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.25);
-}
-
-.liquidGlass-shine {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-
-  overflow: hidden;
-
-  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
-    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
-}
-
-.liquidGlass-text {
-  z-index: 3;
-  font-size: 2rem;
-  color: black;
-}
-
-/* NAVBAR LIQUID GLASS */
-.vp-navbar {
-  @extend .liquidGlass-wrapper;
-  position: fixed;
-  inset: 0 0 auto;
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.18), 0 0 20px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  cursor: default; // keep nav cursor normal
-}
-
-.vp-navbar::before {
-  content: "";
-  @extend .liquidGlass-wrapper;
-}
- 
-.vp-navbar::after {
-  content: "";
-  @extend .liquidGlass-wrapper;
-}
-
-
-.vp-navbar .vp-navbar-start,
-.vp-navbar .vp-navbar-center,
-.vp-navbar .vp-navbar-end {
-  position: relative;
-  z-index: 3;
-}
-
-
-/* OTHER STYLES */
-
+/* ==============================================
+   Base
+   ============================================== */
 
 a {
   text-decoration: none;
 }
 
-.wrapper {
-  display: flex;
-  gap: 25px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+/* ==============================================
+   Navbar — frosted glass
+   ============================================== */
+
+.vp-navbar {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.menu,
-.menu > div {
-  padding: 0.4rem;
-  border-radius: 1.8rem;
+html[data-theme="dark"] .vp-navbar {
+  background: rgba(30, 30, 32, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.menu:hover {
-  padding: 0.6rem;
-  border-radius: 1.8rem;
+/* Back-to-top button — frosted glass */
+
+.vp-back-to-top-button {
+  background: rgba(255, 255, 255, 0.72) !important;
+  backdrop-filter: blur(10px) saturate(160%);
+  -webkit-backdrop-filter: blur(10px) saturate(160%);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.menu > div > div {
-  font-size: 20px;
-  color: white;
-  padding: 0.4rem 0.6rem;
-  border-radius: 0.8rem;
-  transition: all 0.1s ease-in;
+html[data-theme="dark"] .vp-back-to-top-button {
+  background: rgba(30, 30, 32, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.menu > div > div:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(2px);
+/* ==============================================
+   Homepage — hero section
+   ============================================== */
+
+// Gradient backgrounds replacing external bg images
+.vp-hero-mask.light {
+  background: linear-gradient(
+    135deg,
+    rgba(191, 17, 145, 0.08) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(120, 100, 220, 0.06) 100%
+  ) !important;
 }
 
-.dock {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-radius: 2rem;
-  padding: 0.6rem;
+.vp-hero-mask.dark {
+  background: linear-gradient(
+    135deg,
+    rgba(191, 17, 145, 0.25) 0%,
+    rgba(30, 30, 32, 1) 50%,
+    rgba(120, 100, 220, 0.15) 100%
+  ) !important;
 }
 
-.dock,
-.dock > div {
-  border-radius: 2rem;
+// Floating logo animation
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
 
-.dock:hover {
-  padding: 0.8rem;
-  border-radius: 2.5rem;
+.vp-hero-image {
+  animation: hero-float 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(191, 17, 145, 0.2));
 }
 
-.dock:hover > div {
-  border-radius: 2.5rem;
-}
+// Action button glow
+.vp-hero-action.primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 
-.dock img {
-  width: 75px;
-  padding: 0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-}
-
-.dock img:hover {
-  transform-origin: center center;
-}
-
-.button {
-  padding: 1.5rem 2.5rem;
-  border-radius: 3rem;
-}
-
-.button,
-.button > div {
-  border-radius: 3rem;
-}
-
-.button:hover {
-  padding: 1.8rem 2.8rem;
-}
-
-.button:hover > div {
-  border-radius: 4rem;
-}
-
-.button svg {
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
-}
-
-.button:hover svg {
-  transform: scale(0.95);
-}
-
-@keyframes moveBackground {
-  from {
-    background-position: 0% 0%;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
   }
-  to {
-    background-position: 0% -1000%;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(191, 17, 145, 0.35);
+
+    &::before {
+      opacity: 1;
+    }
   }
+}
+
+/* ==============================================
+   Homepage — highlights & features
+   ============================================== */
+
+// Frosted glass cards for highlight sections
+.vp-highlight {
+  .vp-highlight-item-wrapper {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  html[data-theme="dark"] & .vp-highlight-item-wrapper {
+    background: rgba(40, 40, 45, 0.55);
+    border-color: rgba(255, 255, 255, 0.06);
+
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+  }
+}
+
+// Frosted glass cards for feature items
+.vp-feature-item {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  }
+
+  html[data-theme="dark"] & {
+    background: rgba(40, 40, 45, 0.55);
+    border-color: rgba(255, 255, 255, 0.06);
+
+    &:hover {
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+/* ==============================================
+   Mobile sidebar — frosted glass
+   ============================================== */
+
+@media (max-width: 959px) {
+  .vp-sidebar {
+    background: rgba(255, 255, 255, 0.78) !important;
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border-right: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  html[data-theme="dark"] .vp-sidebar {
+    background: rgba(30, 30, 32, 0.78) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .vp-sidebar-mask {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* ==============================================
+   Section spacing
+   ============================================== */
+
+.vp-highlight + .vp-highlight {
+  margin-top: 3rem;
+}
+
+// Highlight images — subtle float
+.vp-highlight-image img {
+  transition: transform 0.4s ease;
+}
+
+.vp-highlight:hover .vp-highlight-image img {
+  transform: scale(1.02);
 }

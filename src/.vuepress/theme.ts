@@ -37,10 +37,80 @@ export default hopeTheme({
     },
   },
 
-  // 多语言配置
-  // metaLocales: {
-  //  editLink: "在 GitHub 上编辑此页",
-  // },
+  // 多语言配置 — 中文本地化
+  locales: {
+    "/": {
+      navbarLocales: {
+        selectLangAriaLabel: "选择语言",
+        selectLangText: "语言",
+        selectLangLink: "/",
+      },
+      sidebarLocales: {
+        selectGroupName: "选择分组",
+        selectGroupAriaLabel: "选择分组",
+      },
+      metaLocales: {
+        author: "作者",
+        date: "日期",
+        origin: "原创",
+        views: "访问量",
+        category: "分类",
+        tag: "标签",
+        readingTime: "阅读时间",
+        words: "字数",
+        draft: "草稿",
+        toc: "目录",
+        prev: "上一篇",
+        next: "下一篇",
+        lastUpdated: "上次编辑于",
+        contributors: "贡献者",
+        editLink: "在 GitHub 上编辑此页",
+        print: "打印",
+      },
+      blogLocales: {
+        article: "文章",
+        articleList: "文章列表",
+        category: "分类",
+        tag: "标签",
+        timeline: "时间轴",
+        timelineText: "昨日不在",
+        allText: "全部",
+        intro: "个人介绍",
+        star: "收藏",
+      },
+      paginationLocales: {
+        prev: "上一页",
+        next: "下一页",
+        navigate: "跳转到",
+        actionText: "前往",
+        errorText: "请输入 1 到 $page 之前的页码！",
+      },
+      outlookLocales: {
+        themeColor: "主题色",
+        darkmode: "主题模式",
+        fullscreen: "全屏",
+      },
+      encryptLocales: {
+        iconLabel: "页面已加密",
+        title: "请输入密码",
+        placeholder: "输入密码...",
+        remember: "记住密码",
+        errorHint: "密码错误，请重试！",
+      },
+      routeLocales: {
+        skipToContent: "跳至主要内容",
+        notFoundTitle: "页面不存在",
+        notFoundMsg: [
+          "这里什么也没有",
+          "我们是怎么来到这里的？",
+          "这是一个 404 页面",
+          "看起来我们进入了错误的链接",
+        ],
+        backToHome: "返回主页",
+        openInNewWindow: "在新窗口打开",
+      },
+    },
+  },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
  hotReload: true,
