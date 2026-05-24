@@ -1,8 +1,5 @@
 ---
-title: 目录
-article: false
+layout: CustomMenu
 ---
 
-<div class="catalog-display-container">
-  <Catalog />
-</div>
+<Catalog />

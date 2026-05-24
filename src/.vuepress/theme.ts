@@ -190,6 +190,17 @@ export default hopeTheme({
 
   // 在这里配置主题提供的插件
   plugins: {
+    // 我认为这个网站是学习知识网站，而不是阅读小说。所以用户在浏览网站时应该会相对变慢
+    readingTime: {
+      wordPerMinute: 125,
+      locales: {
+        "/": {
+          time: "大约需要 $time 分钟看完",
+          less1Minute: "不到 1 分钟就能看完"
+        },
+      },
+    },
+
     // 评论区功能关闭。
     // comment: {
     //  provider: "Giscus",
@@ -198,9 +209,9 @@ export default hopeTheme({
     //  category: "Announcements",
     //  categoryId: "DIC_kwDOG_Pt2M4COD69",
     //},
-    
+
     components: {
-      
+
       components: ["Badge", "VPCard", "VidStack", "SiteInfo", "BiliBili", "PDF", "VPBanner", "Share"],
     },
 
