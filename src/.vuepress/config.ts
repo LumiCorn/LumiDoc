@@ -1,8 +1,19 @@
 import { defineUserConfig } from "vuepress";
+import { viteBundler } from "@vuepress/bundler-vite";
 
 import theme from "./theme.js";
 
 export default defineUserConfig({
+  bundler: viteBundler({
+    vuePluginOptions: {
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag: string) => tag.startsWith("iconify-"),
+        },
+      },
+    },
+  }),
+
   base: "/",
 
   lang: "zh-CN",
@@ -12,6 +23,11 @@ export default defineUserConfig({
   theme,
 
   head: [
+    ["link", { rel: "icon", href: "/LumiDoc_LOGO.svg" }],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" }],
+    ["script", { src: "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" }],
+
     [
       "script",
       {},

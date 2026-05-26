@@ -27,5 +27,8 @@
     "onlyBuiltDependencies": [
       "esbuild"
     ]
+  },
+  "dependencies": {
+    "gsap": "^3.15.0"
   }
 }
