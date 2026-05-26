@@ -130,18 +130,22 @@ CC-Switch-[当前版本号]-macOS.dmg
 下载完成后，双击进入 macOS 安装流程。
 安装完成后，打开 CC Switch App。
 
+
 ::: warning 如果打不开
 macOS 可能会提示 **"无法验证开发者"**，这是正常现象。前往 **系统设置 → 隐私与安全性**，找到 CC Switch 并点击 **"仍要打开"** 即可。
 :::
 
 打开后，确保顶部选中的是 **Claude Code** 标签页。
+![选中 Claude Code 标签页](/assets/image/AIpics/Snapzy_2026-05-26_19-53-53_915_annotated.png)
 
 #### 添加 DeepSeek 提供商
 
 1. 点击右上角的 **+** 按钮
 2. 在"预设"下拉菜单中选择 **DeepSeek**
+![选择 DeepSeek](/assets/image/AIpics/Snapzy_2026-05-26_19-57-19_059_annotated.png)
 3. 在 **API Key** 输入框中粘贴你之前获取的 Key（类似 `sk-0413fa8b09104795b828c5d24efdcbda`）
    - 预设会自动填充端点地址，不需要手动填写
+   ![编辑 DeepSeek API](/assets/image/AIpics/Snapzy_2026-05-26_20-01-10_167_annotated.png)
 4. 点击 **"添加"**
 
 

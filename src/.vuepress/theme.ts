@@ -1,7 +1,6 @@
 import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
-import sidebar from "./sidebar.js";
 
 export default hopeTheme({
   hostname: "https://doc.lumicornx.xyz",
@@ -21,7 +20,7 @@ export default hopeTheme({
   navbar,
 
   // 侧边栏
-  sidebar,
+  sidebar: false,
 
   // 页脚
   // footer: "",

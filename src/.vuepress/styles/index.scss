@@ -54,6 +54,26 @@ html[data-theme="dark"] .vp-back-to-top-button {
 }
 
 /* ==============================================
+   TOC dropdown — frosted glass (narrow screens)
+   ============================================== */
+
+@media (max-width: 1279px) {
+  #toc {
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(10px) saturate(160%);
+    -webkit-backdrop-filter: blur(10px) saturate(160%);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  html[data-theme="dark"] #toc {
+    background: rgba(30, 30, 32, 0.72) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ==============================================
    Mobile sidebar — frosted glass
    ============================================== */
 
