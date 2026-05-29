@@ -148,6 +148,7 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
     markmap: true,
+    preview: true,
 
     // 取消注释它们如果你需要 TeX 支持
    math: {
@@ -212,6 +213,12 @@ export default hopeTheme({
     components: {
 
       components: ["Badge", "VPCard", "VidStack", "SiteInfo", "BiliBili", "PDF", "VPBanner", "Share"],
+
+      componentOptions: {
+        share: {
+          services: ["weibo", "qq", "qzone", "douban", "twitter", "telegram", "facebook", "reddit", "whatsapp", "email"],
+        },
+      },
     },
 
     icon: {
