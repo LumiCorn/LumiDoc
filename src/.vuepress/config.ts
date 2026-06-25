@@ -18,7 +18,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "LumiDoc | 由 悠悠狮羝LumiCornX 建立的文档网站",
+  title: "LumiDoc",
   description: "寻找你喜欢的一切。",
 
   theme,
