@@ -5,6 +5,8 @@ import navbar from "./navbar.js";
 export default hopeTheme({
   hostname: "https://doc.lumicornx.xyz",
 
+  darkmode: "auto",
+
   author: {
     name: "悠悠狮羝LumiCornX",
     url: "https://lumicornx.xyz",
