@@ -1,6 +1,7 @@
 // place your custom styles here
 
 @use "vuepress-theme-hope/presets/bounce-icon";
+@use "../plugins/archive-banner/archive-banner.scss";
 
 /* Hide default scrollbar — let the device show its own overlay scrollbar */
 html {

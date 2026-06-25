@@ -1,9 +1,4 @@
-import { fileURLToPath } from "node:url";
-import { dirname, resolve } from "node:path";
 import type { Plugin } from "@vuepress/core";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 export const archiveBannerPlugin: Plugin = {
   name: "vuepress-plugin-archive-banner",
@@ -36,6 +31,4 @@ export const archiveBannerPlugin: Plugin = {
       state.tokens.unshift(token);
     });
   },
-
-  clientConfigFile: resolve(__dirname, "client.ts"),
 };
