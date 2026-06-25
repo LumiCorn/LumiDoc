@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoutes } from "vuepress/client";
-import { computed } from "vue";
+import { computed, ref } from "vue";
 
 interface RouteEntry {
   loader: () => Promise<{ _pageData?: { title?: string } }>;
@@ -18,7 +18,9 @@ interface FolderNode {
   folders: FolderNode[];
 }
 
-const routes = useRoutes();
+const routes = import.meta.env.SSR
+  ? ref<Record<string, RouteEntry>>({})
+  : useRoutes();
 
 function deriveTitle(path: string): string {
   const decoded = decodeURIComponent(path);

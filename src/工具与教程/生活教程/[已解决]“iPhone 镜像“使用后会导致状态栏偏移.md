@@ -3,7 +3,7 @@ title: 【已被修复】“iPhone 镜像“使用后会导致状态栏偏移
 date: 2026-05-26
 article: true
 archive: true
-archiveNote: 该 BUG 已被 Apple 于 2026 年 6 月 23 日 (GMT+8) 的 iOS 27 Beta 2 版本中被修复。
+archiveNote: 该 BUG 已被 Apple 于 2026 年 6 月 23 日 (GMT+8) 的 iOS 27 Beta 2 版本中修复。
 ---
 
 
