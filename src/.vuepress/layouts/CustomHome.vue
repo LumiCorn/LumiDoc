@@ -6,7 +6,7 @@
     <!-- Nav — outside home-root so position:fixed sticks to viewport -->
     <nav class="top-nav">
       <div class="nav-left">
-        <img src="/LumiDoc_LOGO.svg" alt="Logo" class="nav-logo-img" />
+        <img src="/favicon.ico" alt="Logo" class="nav-logo-img" />
         <a href="/" class="nav-logo-text">Lumi<span>Doc</span></a>
       </div>
       <div class="nav-center">

@@ -78,7 +78,7 @@ function insertIntoTree(node: FolderNode, segments: string[], doc: DocItem) {
     <!-- Navbar -->
     <nav class="top-nav">
       <a class="nav-brand" href="/">
-        <img src="/LumiDoc_LOGO.svg" alt="Logo" class="nav-logo" />
+        <img src="/favicon.ico" alt="Logo" class="nav-logo" />
         <span class="nav-name">LumiDoc</span>
       </a>
       <div class="nav-links">

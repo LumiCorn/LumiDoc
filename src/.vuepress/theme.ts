@@ -10,7 +10,7 @@ export default hopeTheme({
     url: "https://lumicornx.xyz",
   },
 
-  logo: "/LumiDoc_LOGO.svg",
+  logo: "/favicon.ico",
 
   // repo: "vuepress-theme-hope/vuepress-theme-hope",
 

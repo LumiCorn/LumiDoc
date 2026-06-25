@@ -2,6 +2,7 @@ import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 
 import theme from "./theme.js";
+import { archiveBannerPlugin } from "./plugins/archive-banner/index.js";
 
 export default defineUserConfig({
   bundler: viteBundler({
@@ -22,8 +23,10 @@ export default defineUserConfig({
 
   theme,
 
+  plugins: [archiveBannerPlugin],
+
   head: [
-    ["link", { rel: "icon", href: "/LumiDoc_LOGO.svg" }],
+    ["link", { rel: "icon", href: "/favicon.ico" }],
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     ["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" }],
     ["script", { src: "https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js" }],

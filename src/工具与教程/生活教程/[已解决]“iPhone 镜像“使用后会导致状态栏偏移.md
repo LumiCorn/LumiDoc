@@ -1,8 +1,11 @@
 ---
-title: 【已解决】“iPhone 镜像“使用后会导致状态栏偏移
+title: 【已被修复】“iPhone 镜像“使用后会导致状态栏偏移
 date: 2026-05-26
 article: true
+archive: true
+archiveNote: 该 BUG 已被 Apple 于 2026 年 6 月 23 日 (GMT+8) 的 iOS 27 Beta 2 版本中被修复。
 ---
+
 
 ## Bug 复现
 
@@ -12,7 +15,7 @@ article: true
 ![iPhone 状态栏](/assets/image/tools/Image_01.png)
 
 - 可能可复现的设备：拥有**灵动岛**的 iPhone
-- 确认问题存在的设备：<i class="fa-solid fa-mobile-button"></i>iPhone 16 Pro Max；<i class="fa-solid fa-mobile-button"></i>iPhone 17 Pro
+- 确认问题存在的设备：<i class="fa-solid fa-mobile-button"></i> iPhone 16 Pro Max；<i class="fa-solid fa-mobile-button"></i> iPhone 17 Pro
 - 可复现的系统：iOS 18.0 ~ iOS 26.5
 - 可复现成功率：<a style="color: #e8b730"><i class="fa-solid fa-ranking-star"></i> 100% 完美复现</a>
 
@@ -36,3 +39,5 @@ article: true
 也就是先确保在连接前，**iPhone 已进入待机显示模式。**
 并确保 **iPhone 一直处于待机显示模式**，直到 iPhone 镜像结束连接。
 :::
+
+
