@@ -189,18 +189,25 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-gsap.registerPlugin(ScrollTrigger)
+let gsap: any = null
+let ScrollTrigger: any = null
 
 const rootEl = ref<HTMLElement | null>(null)
 const bgCanvas = ref<HTMLCanvasElement | null>(null)
-let ctx: gsap.Context | null = null
+let ctx: any = null
 let animFrameId = 0
 
-onMounted(() => {
+onMounted(async () => {
   if (!rootEl.value) return
+
+  const [gsapMod, stMod] = await Promise.all([
+    import('gsap'),
+    import('gsap/ScrollTrigger'),
+  ])
+  gsap = gsapMod.default
+  ScrollTrigger = stMod.ScrollTrigger
+  gsap.registerPlugin(ScrollTrigger)
 
   initParticles()
 
@@ -256,6 +263,7 @@ function initParticles() {
 }
 
 function initAnimations() {
+  if (!gsap) return
   // Nav entrance
   gsap.from('.top-nav', {
     opacity: 0, y: -24, duration: 0.9, ease: 'power3.out', delay: 0.05,
