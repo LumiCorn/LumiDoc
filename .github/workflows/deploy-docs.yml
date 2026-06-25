@@ -18,22 +18,20 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
-
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: npm
 
       - name: 安装依赖
-        run: pnpm install
+        run: npm ci
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |
-          pnpm run docs:build
+          npm run docs:build
           > src/.vuepress/dist/.nojekyll
 
       - name: 部署文档
